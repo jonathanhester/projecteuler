@@ -8,3 +8,13 @@ def factors_of(number)
   end
   divisors.sort.map{|div| [div, number / div]}
 end
+
+def proper_divisors(num)
+  a = factors_of(num).flatten.uniq.sort
+  a.pop
+  a
+end
+
+def factorial(n)
+  f = 1; for i in 1..n; f *= i; end; f
+end
